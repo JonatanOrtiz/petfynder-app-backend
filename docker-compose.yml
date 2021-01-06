@@ -1,0 +1,11 @@
+services:
+    container:
+        image: node-for-react 
+        ports:
+            - 5000:5000
+        volumes:
+            - .:/PetfynderBackend
+        tty: true
+        working_dir: /PetfynderBackend
+        command: >
+            bash -c "npm run dev"
